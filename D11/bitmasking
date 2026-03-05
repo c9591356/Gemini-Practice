@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class BitController {
+public:
+    // 1. Set Bit：把 num 的第 k 個 bit 設為 1，其他 bit 保持原樣
+    // 範例：num = 0010, k = 0 -> 回傳 0011
+    int setBit(int num, int k) {
+        return num|(1<<k);
+    }
+
+    // 2. Clear Bit：把 num 的第 k 個 bit 設為 0，其他 bit 保持原樣
+    // 範例：num = 0011, k = 1 -> 回傳 0001
+    int clearBit(int num, int k) {
+        return num&~(1<<k);
+    }
+
+    // 3. Toggle Bit：把 num 的第 k 個 bit 反轉 (0變1，1變0)，其他 bit 保持原樣
+    // 範例：num = 0101, k = 2 -> 回傳 0001
+    int toggleBit(int num, int k) {
+        return num^(1<<k);
+    }
+
+    // 4. Check Bit：檢查 num 的第 k 個 bit 是 0 還是 1
+    // 如果是 1 請回傳 true (或大於0的數)，是 0 請回傳 false (或 0)
+    bool checkBit(int num, int k) {
+        return num&(1<<k);
+    }
+};
