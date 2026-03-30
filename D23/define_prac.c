@@ -1,0 +1,1 @@
+#define MIN(A, B)  (A)>(B) ? (B):(A);
